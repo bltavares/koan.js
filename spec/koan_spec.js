@@ -1,0 +1,2 @@
+describe('koan.js', function () {
+});
