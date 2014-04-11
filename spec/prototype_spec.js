@@ -29,7 +29,7 @@ describe('Prototype', function () {
       expect(instance.method()).toBe('child');
     });
 
-    it('uses new protytpe methods on existing instances', function () {
+    it('uses new prototype methods on existing instances', function () {
       var instance = Object.create(new Super());
 
       Super.prototype.newMethod = function () {
