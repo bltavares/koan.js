@@ -18,4 +18,22 @@ describe('Numbers', function () {
   it('should divide numbers', function () {
     expect(2 / 2).toBe(__);
   });
+
+  describe('Infinity', function () {
+    it('sums', function () {
+      expect(Infinity + Infinity).toBe(__);
+    });
+
+    it('multiplies', function () {
+      expect(Infinity * Infinity).toBe(__);
+    });
+
+    it('does not substract', function () {
+      expect(Infinity - Infinity).toBe(__);
+    });
+
+    it('does not divide', function () {
+      expect(Infinity / Infinity).toBe(__);
+    });
+  });
 });
