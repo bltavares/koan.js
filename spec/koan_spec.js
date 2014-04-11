@@ -33,11 +33,11 @@ describe('koan.js', function () {
           expect('a' == 'a').toBe(__);
         });
 
-        it('should equal the other literal', function () {
+        it('should equal the number literal', function () {
           expect('1' == 1).toBe(__);
         });
 
-        it('should equal the other literal', function () {
+        it('should equal the boolean literal', function () {
           expect('' == false).toBe(__);
         });
 
@@ -78,6 +78,40 @@ describe('koan.js', function () {
 
       it('should have a type', function () {
         expect(typeof new String()).toBe(__);
+      });
+
+      describe('equality', function () {
+        it('should equal the other object', function () {
+          expect(new String('a') == new String('a')).toBe(__);
+        });
+
+        it('should equal the other literal', function () {
+          expect(new String('a') == 'a').toBe(__);
+        });
+
+        it('should equal to a number', function () {
+          expect(new String('1') == 1).toBe(__);
+        });
+
+        it('should equal the boolean', function () {
+          expect(new String('') == false).toBe(__);
+        });
+
+        it('should not be the same as other object', function () {
+          expect(new String('a') === new String('a')).toBe(__);
+        });
+
+        it('should not be the same as other literal', function () {
+          expect(new String('a') === 'a').toBe(__);
+        });
+
+        it('should not be the same as a number', function () {
+          expect(new String('1') === 1).toBe(__);
+        });
+
+        it('should not be the same as a boolean', function () {
+          expect(new String('') === false).toBe(__);
+        });
       });
     });
   });
