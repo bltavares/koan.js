@@ -27,6 +27,32 @@ describe('koan.js', function () {
       it('should have a type', function () {
         expect(typeof '').toBe(__);
       });
+
+      describe('equality', function () {
+        it('should equal the other literal', function () {
+          expect('a' == 'a').toBe(__);
+        });
+
+        it('should equal the other literal', function () {
+          expect('1' == 1).toBe(__);
+        });
+
+        it('should equal the other literal', function () {
+          expect('' == false).toBe(__);
+        });
+
+        it('should be the same as other literal', function () {
+          expect('a' === 'a').toBe(__);
+        });
+
+        it('should not be the same as a number', function () {
+          expect('1' === 1).toBe(__);
+        });
+
+        it('should not be the same as a boolean', function () {
+          expect('' === false).toBe(__);
+        });
+      });
     });
 
     describe('object', function () {
