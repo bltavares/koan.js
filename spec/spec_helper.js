@@ -1,16 +1,13 @@
 var __ = 'Fill me in';
 
 (function (env) {
-  var failed;
-  env.addReporter({ 
+  var shouldDisable;
+
+  env.addReporter({
     specStarted: function (spec) {
-      if (failed) {
-        spec.disabled();
-      }
+      shouldDisable && spec.disabled();
     },
     specDone: function (spec) {
-      if (spec.status === 'failed') {
-        failed = true;
-      };
+      shouldDisable = spec.status === 'failed';
     }});
 })(jasmine.getEnv());
