@@ -1,3 +1,5 @@
+var __ = 'Fill me in';
+
 (function (env) {
   var failed;
   env.addReporter({ 
